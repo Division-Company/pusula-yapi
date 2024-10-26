@@ -7,13 +7,13 @@ function App() {
       <aside className="w-1/5 bg-gray-800 text-white flex flex-col items-start p-4">
         <h1 className="text-2xl font-bold mb-6">Metal Yapı</h1>
         <nav className="flex flex-col space-y-4">
-          <a href="#" className="hover:text-orange-400">Ana Sayfa</a>
-          <a href="#" className="hover:text-orange-400">Şirket</a>
-          <a href="#" className="hover:text-orange-400">Referanslar</a>
-          <a href="#" className="hover:text-orange-400">Devam Eden Projeler</a>
-          <a href="#" className="hover:text-orange-400">Süreçler</a>
-          <a href="#" className="hover:text-orange-400">Kariyer</a>
-          <a href="#" className="hover:text-orange-400">İletişim</a>
+          <a className="hover:text-orange-400">Ana Sayfa</a>
+          <a className="hover:text-orange-400">Şirket</a>
+          <a className="hover:text-orange-400">Referanslar</a>
+          <a className="hover:text-orange-400">Devam Eden Projeler</a>
+          <a className="hover:text-orange-400">Süreçler</a>
+          <a className="hover:text-orange-400">Kariyer</a>
+          <a className="hover:text-orange-400">İletişim</a>
         </nav>
       </aside>
 
@@ -48,18 +48,18 @@ function App() {
         {/* Alt Menü */}
         <footer className="bg-gray-800 text-white p-4 flex justify-between items-center text-xs">
           <div className="flex space-x-4">
-            <a href="#">Bilgi Toplumu Hizmetleri</a>
-            <a href="#">KVKK</a>
-            <a href="#">PDP</a>
+            <a>Bilgi Toplumu Hizmetleri</a>
+            <a>KVKK</a>
+            <a>PDP</a>
           </div>
           <div className="flex space-x-4">
-            <a href="#">Yasal Sorumluluklar</a>
-            <a href="#">Modern Kölelik Bildirimi</a>
+            <a>Yasal Sorumluluklar</a>
+            <a>Modern Kölelik Bildirimi</a>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-300">Facebook</a>
-            <a href="#" className="hover:text-gray-300">Instagram</a>
-            <a href="#" className="hover:text-gray-300">LinkedIn</a>
+            <a className="hover:text-gray-300">Facebook</a>
+            <a className="hover:text-gray-300">Instagram</a>
+            <a className="hover:text-gray-300">LinkedIn</a>
           </div>
         </footer>
       </div>
