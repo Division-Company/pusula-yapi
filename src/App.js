@@ -7,13 +7,13 @@ function App() {
       <aside className="w-1/5 bg-gray-800 text-white flex flex-col items-start p-4">
         <h1 className="text-2xl font-bold mb-6">Metal Yapı</h1>
         <nav className="flex flex-col space-y-4">
-          <a className="hover:text-orange-400">Ana Sayfa</a>
-          <a className="hover:text-orange-400">Şirket</a>
-          <a className="hover:text-orange-400">Referanslar</a>
-          <a className="hover:text-orange-400">Devam Eden Projeler</a>
-          <a className="hover:text-orange-400">Süreçler</a>
-          <a className="hover:text-orange-400">Kariyer</a>
-          <a className="hover:text-orange-400">İletişim</a>
+          <div className="hover:text-orange-400 cursor-pointer">Ana Sayfa</div>
+          <div className="hover:text-orange-400 cursor-pointer">Şirket</div>
+          <div className="hover:text-orange-400 cursor-pointer">Referanslar</div>
+          <div className="hover:text-orange-400 cursor-pointer">Devam Eden Projeler</div>
+          <div className="hover:text-orange-400 cursor-pointer">Süreçler</div>
+          <div className="hover:text-orange-400 cursor-pointer">Kariyer</div>
+          <div className="hover:text-orange-400 cursor-pointer">İletişim</div>
         </nav>
       </aside>
 
@@ -48,18 +48,18 @@ function App() {
         {/* Alt Menü */}
         <footer className="bg-gray-800 text-white p-4 flex justify-between items-center text-xs">
           <div className="flex space-x-4">
-            <a>Bilgi Toplumu Hizmetleri</a>
-            <a>KVKK</a>
-            <a>PDP</a>
+            <div className="hover:text-gray-300 cursor-pointer">Bilgi Toplumu Hizmetleri</div>
+            <div className="hover:text-gray-300 cursor-pointer">KVKK</div>
+            <div className="hover:text-gray-300 cursor-pointer">PDP</div>
           </div>
           <div className="flex space-x-4">
-            <a>Yasal Sorumluluklar</a>
-            <a>Modern Kölelik Bildirimi</a>
+            <div className="hover:text-gray-300 cursor-pointer">Yasal Sorumluluklar</div>
+            <div className="hover:text-gray-300 cursor-pointer">Modern Kölelik Bildirimi</div>
           </div>
           <div className="flex space-x-4">
-            <a className="hover:text-gray-300">Facebook</a>
-            <a className="hover:text-gray-300">Instagram</a>
-            <a className="hover:text-gray-300">LinkedIn</a>
+            <div className="hover:text-gray-300 cursor-pointer">Facebook</div>
+            <div className="hover:text-gray-300 cursor-pointer">Instagram</div>
+            <div className="hover:text-gray-300 cursor-pointer">LinkedIn</div>
           </div>
         </footer>
       </div>
