@@ -1,68 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Sidebar from './components/sidebar';
+import Content from './components/content';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('Referanslarımız');
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const handleMenuClick = (section) => {
+    setActiveSection(section);
+    setMenuOpen(false);
+  };
+
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50 overflow-hidden">
       {/* Yan Menü */}
-      <aside className="w-1/5 bg-gray-800 text-white flex flex-col items-start p-4">
-        <h1 className="text-2xl font-bold mb-6">Metal Yapı</h1>
-        <nav className="flex flex-col space-y-4">
-          <div className="hover:text-orange-400 cursor-pointer">Ana Sayfa</div>
-          <div className="hover:text-orange-400 cursor-pointer">Şirket</div>
-          <div className="hover:text-orange-400 cursor-pointer">Referanslar</div>
-          <div className="hover:text-orange-400 cursor-pointer">Devam Eden Projeler</div>
-          <div className="hover:text-orange-400 cursor-pointer">Süreçler</div>
-          <div className="hover:text-orange-400 cursor-pointer">Kariyer</div>
-          <div className="hover:text-orange-400 cursor-pointer">İletişim</div>
-        </nav>
-      </aside>
-
+      <Sidebar activeSection={activeSection} menuOpen={menuOpen} handleMenuClick={handleMenuClick} />
+      {/* Hamburger Menü Butonu */}
+      {/* <button
+        onClick={toggleMenu}
+        className="absolute top-4 left-4 md:hidden z-20 p-2 bg-gray-800 text-white rounded-md"
+      >
+        ☰
+      </button> */}
       {/* Ana İçerik */}
-      <div className="flex flex-col flex-grow">
-        {/* Üst Menü */}
-        <header className="bg-gray-200 p-4 flex justify-around items-center text-sm">
-          <button className="py-2 px-4 hover:bg-gray-300">Genel Silikon Kaplama Sistem</button>
-          <button className="py-2 px-4 hover:bg-gray-300">Akıllı Cephe</button>
-          <button className="py-2 px-4 hover:bg-orange-400 bg-orange-300">Birleştirilmiş Panel Sistem</button>
-          <button className="py-2 px-4 hover:bg-gray-300">Özel Tasarım Cephe</button>
-          <button className="py-2 px-4 hover:bg-gray-300">Çift Katmanlı Cephe</button>
-        </header>
-
-        {/* Ana Görsel Bölümü */}
-        <main className="flex-grow bg-white p-8 relative">
-          <div className="relative flex items-center justify-center">
-            <img src="your-image-url.jpg" alt="Bina Görseli" className="w-full h-96 object-cover rounded-lg shadow-lg" />
-            <div className="absolute bottom-4 right-4 bg-orange-500 text-white px-4 py-2 rounded-md text-lg font-semibold">
-              DONBASS ARENA
-            </div>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <p className="text-xl font-light text-gray-700">2023 yılına kadar dünyanın en iyi cephe şirketi olmayı hedefliyoruz</p>
-            <div className="bg-gray-300 p-2 rounded">
-              <span className="text-xs">Donetsk</span>
-              <img src="map-image-url.jpg" alt="Harita" className="w-16 h-16 rounded-md" />
-            </div>
-          </div>
-        </main>
-
-        {/* Alt Menü */}
-        <footer className="bg-gray-800 text-white p-4 flex justify-between items-center text-xs">
-          <div className="flex space-x-4">
-            <div className="hover:text-gray-300 cursor-pointer">Bilgi Toplumu Hizmetleri</div>
-            <div className="hover:text-gray-300 cursor-pointer">KVKK</div>
-            <div className="hover:text-gray-300 cursor-pointer">PDP</div>
-          </div>
-          <div className="flex space-x-4">
-            <div className="hover:text-gray-300 cursor-pointer">Yasal Sorumluluklar</div>
-            <div className="hover:text-gray-300 cursor-pointer">Modern Kölelik Bildirimi</div>
-          </div>
-          <div className="flex space-x-4">
-            <div className="hover:text-gray-300 cursor-pointer">Facebook</div>
-            <div className="hover:text-gray-300 cursor-pointer">Instagram</div>
-            <div className="hover:text-gray-300 cursor-pointer">LinkedIn</div>
-          </div>
-        </footer>
-      </div>
+      <Content activeSection={activeSection} />
     </div>
   );
 }
