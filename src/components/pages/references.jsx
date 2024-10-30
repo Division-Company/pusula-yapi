@@ -14,11 +14,11 @@ export default function Referanslar() {
         <div className="flex flex-col  items-center justify-center min-h-screen bg-gray-900 p-8">
             <h1 className="text-4xl font-bold text-white mb-10">Öne Çıkan Projeler</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5x1">
+            <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5x1">
                 {references.map((ref, index) => (
                     <motion.div
                         key={index}
-                        className="relative min-w-96 w-full h-80 rounded-lg overflow-hidden shadow-lg group bg-cover bg-center"
+                        className=" filter grayscale-[100%] hover:fliter hover:grayscale-[0%] relative min-w-96 w-full h-80 rounded-lg overflow-hidden shadow-lg group bg-cover bg-center"
                         style={{ backgroundImage: `url(${ref.image})` }}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
