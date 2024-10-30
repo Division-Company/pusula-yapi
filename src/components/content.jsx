@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import References from './sections/references';
+import References from './pages/references';
 
 export default function Content({ activeSection }) {
     return (
