@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Sidebar from './components/sidebar';
-import Content from './components/content';
+import React from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from './routes/route';
 

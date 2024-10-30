@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen p-8">
       {/* Logo Section */}
       <div className="mb-8 text-center">
         <img src="/path-to-your-logo.png" alt="Pusula Group Logo" className="h-20 mb-4" /> {/* Replace with the actual logo path */}
