@@ -1,11 +1,10 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../components/sidebar';
 
 const MainLayout = ({ children }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('Referanslarımız');
 
-    const toggleMenu = () => setMenuOpen(!menuOpen);
     const handleMenuClick = (section) => {
         setActiveSection(section);
         setMenuOpen(false);
