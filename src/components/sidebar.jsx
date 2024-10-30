@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Sidebar({ activeSection, menuOpen, handleMenuClick }) {
+export default function Sidebar({ activeSection,  handleMenuClick }) {
   const menuItems = [
     { label: 'Ana Sayfa', path: '/' },
     { label: 'Şirket', path: '/company' },

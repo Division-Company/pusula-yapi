@@ -18,7 +18,7 @@ const routes = [
         path: "/",
         element: (
             <MainLayout>
-                <HomePage /> {/* Ana sayfa MainLayout içinde gösteriliyor */}
+                <HomePage /> 
             </MainLayout>
         ),
     },
