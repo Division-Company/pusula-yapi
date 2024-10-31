@@ -40,7 +40,7 @@ export default function Referanslar() {
                         </div>
 
                         {/* Yazı etiketi şeklinde stil verilmiş metin */}
-                        <div className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-90 rounded-full px-4 py-2 shadow text-black text-sm font-semibold">
+                        <div className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-90 rounded-lg px-4 py-2 shadow text-black text-sm font-semibold">
                             <p className="truncate hover:overflow-auto hover:whitespace-normal ">{ref.description}</p>
                             <p className="text-xs font-light truncate">{ref.country}</p>
                         </div>

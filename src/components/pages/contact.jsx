@@ -9,7 +9,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Information Section in Full-Width Box */}
-      <div className="w-full max-w-3xl bg-gray-800 text-white p-8 rounded-lg shadow-lg">
+      <div className="w-full max-w-7xl bg-gray-800 text-white p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold text-orange-400 mb-6 text-center">İletişim</h2>
         <p className="text-lg font-semibold mb-4 text-center">
           <span className="block">İvedik OSB. Mahallesi</span>
@@ -20,6 +20,7 @@ export default function Contact() {
           <p className="text-orange-400 mb-2">Telefon:</p>
           <p className="hover:text-orange-400 cursor-pointer transition-colors">+90 312 394 43 21</p>
           <p className="hover:text-orange-400 cursor-pointer transition-colors">+90 312 394 43 22</p>
+          <p className="hover:text-orange-400 cursor-pointer transition-colors">info@pusulayapi.com.tr</p>
         </div>
       </div>
     </div>

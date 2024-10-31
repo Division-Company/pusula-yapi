@@ -7,20 +7,23 @@ export default function Home() {
     {
       url: "https://www.gazetekadikoy.com.tr/Uploads/gazetekadikoy.com.tr/202309150915591-img.jpg",
       year: 2021,
-      location: "Istanbul",
-      name: "Ülker Fenerbahçe Şükrü Saracoğlu Stadyumu",
+      location: "Kayseri",
+      name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
+      city:"Adana"
     },
     {
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EttD5MTn9hgOD-PrGkB756lnqGE44ZfYQQ&s",
       year: 2020,
-      location: "Paris",
-      name: "Eyfel Kulesi",
+      location: "Ankara",
+      name: "Ankara Etlik Entegre Sağlık Kampüsü",
+      city:"Ankara"
     },
     {
       url: "https://assets.cityexperiences.com/wp-content/uploads/2022/12/Golden-Gate-Bridge.jpg",
       year: 2019,
-      location: "San Francisco",
-      name: "Golden Gate Köprüsü",
+      location: "Yozgat",
+      name: "Yozgat Eğitim ve Araştırma Hastanesi",
+      city:"Yozgat"
     },
   ];
 
@@ -53,10 +56,10 @@ export default function Home() {
 
       {/* Başlangıçta tüm sayfayı kaplayan ve küçülen görsel */}
       <img
-        src="https://i.pinimg.com/originals/bb/5f/4e/bb5f4e6d9ce52c749670cbb24e60526d.jpg"
-        className={`transition-all duration-[2000ms] ease-out ${animateImage
-            ? 'absolute inset-0 w-full h-full' // Tüm ekranı kaplayan
-            : 'absolute w-[190px] shadow-2xl rounded-lg  h-[150px] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
+        src={require(`../assets/${currentPhotoData.city}.png`)}
+        className={`bg-center transition-all duration-[2000ms] ease-out ${animateImage
+            ? 'absolute inset-0 w-full h-[90%] mt-11' // Tüm ekranı kaplayan
+            : 'absolute w-[23%] shadow-2xl rounded-lg  h-[18%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
           } z-10`}
       />
 
