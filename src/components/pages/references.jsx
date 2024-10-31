@@ -14,7 +14,6 @@ const references = [
     { city: 'Ankara', country: 'Ankara', description: 'Devlet Mahellesi Gimsa', image: 'https://i.imgur.com/aL7KIKp.png' },
     { city: 'Ankara', country: 'Ankara', description: 'Atayıldız Plaza 1', image: 'https://i.imgur.com/qywXJ9I.png' },
     { city: 'Ankara', country: 'Ankara', description: 'Atayıldız Plaza 2', image: 'https://i.imgur.com/V8FlLln.png' },
-    { city: 'Ankara', country: 'Ankara', description: 'Atayıldız Plaza 2', image: 'https://i.imgur.com/V8FlLln.png' },
 
     // Daha fazla referans gerektiğinde buraya ekleyin
 ]
