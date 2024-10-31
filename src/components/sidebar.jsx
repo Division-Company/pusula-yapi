@@ -14,7 +14,7 @@ export default function Sidebar({ activeSection, handleMenuClick }) {
   ]
 
   return (
-    <aside className="w-1/5 bg-gray-800 text-white flex flex-col p-4">
+    <aside className="w-[260px] bg-gray-800 text-white flex flex-col p-4">
       <Link to={"/"} className="text-2xl font-bold mb-6">Pusula Group</Link>
       <nav className="flex flex-col space-y-2">
         {menuItems.map((item) => (
@@ -32,7 +32,7 @@ export default function Sidebar({ activeSection, handleMenuClick }) {
               <span className="absolute left-0 h-full w-1 bg-orange-400 rounded-r-md" />
             )}
             <span
-              className={`transition-transform duration-300 ${activeSection === item.label ? 'translate-x-1' : 'translate-x-0'
+              className={`text-sm transition-transform duration-300 ${activeSection === item.label ? 'translate-x-1' : 'translate-x-0'
                 }`}
             >
               {item.label}
