@@ -12,7 +12,6 @@ export default function Home() {
           <div className="hover:text-blue-400">Panel Sistemi</div>
           <div className="text-blue-400 border-b-2 border-blue-400">Özel Tasarım Cephe</div>
           <div className="hover:text-blue-400">Çift Cilt Cephe</div>
-          <div className="rounded-3x1"> Mustafayı TTEN </div>
         </nav>
       </header>
 
