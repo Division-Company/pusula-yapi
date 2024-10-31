@@ -20,7 +20,7 @@ const references = [
 
 export default function Referanslar() {
     return (
-        <div className="flex flex-col  items-center justify-center min-h-screen bg-gray-900 p-8">
+        <div className="flex  flex-col  items-center justify-center  bg-gray-900 p-8">
             <h1 className="text-4xl font-bold text-white mb-10">Öne Çıkan Projeler</h1>
 
             <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5x1">

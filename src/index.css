@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+
+@layer base {
+
+    html,
+    body,
+    #root {
+        @apply h-screen w-screen  box-border 
+    }
+} */
