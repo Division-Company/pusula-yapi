@@ -16,7 +16,7 @@ const MainLayout = ({ children }) => {
             <Sidebar activeSection={activeSection} menuOpen={menuOpen} handleMenuClick={handleMenuClick} />
 
             {/* Ana İçerik */}
-            <main className="flex-1 overflow-y-auto  bg-gray-900 text-white p-4">
+            <main className="flex-1 overflow-y-auto  bg-gray-900 text-white ">
                 {children}
             </main>
         </div>
