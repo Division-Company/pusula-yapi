@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Sidebar({ activeSection,  handleMenuClick }) {
+export default function Sidebar({ activeSection, handleMenuClick }) {
   const menuItems = [
     { label: 'Ana Sayfa', path: '/' },
     { label: 'Şirket', path: '/company' },
@@ -15,7 +15,7 @@ export default function Sidebar({ activeSection,  handleMenuClick }) {
 
   return (
     <aside className="w-1/5 bg-gray-800 text-white flex flex-col p-4">
-      <h1 className="text-2xl font-bold mb-6">Pusula Group</h1>
+      <Link to={"/"} className="text-2xl font-bold mb-6">Pusula Group</Link>
       <nav className="flex flex-col space-y-2">
         {menuItems.map((item) => (
           <Link

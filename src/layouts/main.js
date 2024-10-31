@@ -3,7 +3,7 @@ import Sidebar from '../components/sidebar';
 
 const MainLayout = ({ children }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState('Referanslarımız');
+    const [activeSection, setActiveSection] = useState('Ana Sayfa');
 
     const handleMenuClick = (section) => {
         setActiveSection(section);

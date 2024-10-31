@@ -18,7 +18,7 @@ const routes = [
         path: "/",
         element: (
             <MainLayout>
-                <HomePage /> 
+                <HomePage />
             </MainLayout>
         ),
     },
