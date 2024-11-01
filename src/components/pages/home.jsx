@@ -9,21 +9,21 @@ export default function Home() {
       year: 2021,
       location: "Kayseri",
       name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
-      city:"Adana"
+      city:"Ankara"
     },
     {
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EttD5MTn9hgOD-PrGkB756lnqGE44ZfYQQ&s",
       year: 2020,
       location: "Ankara",
       name: "Ankara Etlik Entegre Sağlık Kampüsü",
-      city:"Ankara"
+      city:"Yozgat"
     },
     {
       url: "https://assets.cityexperiences.com/wp-content/uploads/2022/12/Golden-Gate-Bridge.jpg",
       year: 2019,
       location: "Yozgat",
       name: "Yozgat Eğitim ve Araştırma Hastanesi",
-      city:"Yozgat"
+      city:"Kayseri"
     },
   ];
 
