@@ -48,7 +48,7 @@ export default function Careers() {
             </ul><br />
             <p>Amaçları ile SGK Mevzuatı, Vergi Mevzuatı, Türk Ticaret Kanunu, Borçlar Kanunu, İş Mevzuatı vb. ile Açık Rıza konuları kapsamında işlenebilecek, Vergi Mevzuatı kapsamında, ilgili verinin oluşma tarihinden itibaren en az 5 (beş) yıl ve iş sözleşmesi kapsamında sözleşmeye bağlı elde edilen veriler ile ilgili, iş ilişkisinin sona erme tarihinden itibaren 10 (on) yıl süre ile en az olmak üzere, Açık Rıza Beyanı var ise bu rıza beyanı gereği izin verilen sürelerde saklanabilecek ve bu kapsamda İŞVEREN tarafından hizmet alınan üçüncü kişiler, açık rıza beyanında detayları verilen grup şirketleri, İŞVEREN iş ortakları, tedarikçileri, hukuken yetkili kamu kurum ve kuruluşları ile özel hukuk tüzel kişileriyle paylaşılabilecektir. Özel nitelikli kişisel veriler, Açık Rıza bulunmaması durumunda, yasal zorunluluklar ve KVK Kanunu 6. maddesi ve devamı uyarınca izin verilen haller dışında işlenmeyecek ve saklanmayacaktır.</p>
             <br />
-            <h3>5. Veri Sorumlusuna Başvuru Yolları</h3>
+            <h3><strong>5. Veri Sorumlusuna Başvuru Yolları</strong></h3>
       <p>Kanun’un 11. maddesi uyarınca, Açık Rıza beyanınız bulunsun ya da bulunmasın; İŞVEREN ya da (atanmış ise) İŞVEREN Veri Sorumlusu Temsilcisi’ne başvurarak, kişisel verilerinize ilişkin aşağıda yer alan hususlarda mevcut haklarınızı (Başta KVK Kanunu 5-6. maddeleri ve ilgili düzenlemeleri yanında sair yasal mevzuat dairesinde veri işlenmesi hususundaki düzenleme ve haklar dairesinde) kullanabilirsiniz:</p>
       <ul>
         <br />
