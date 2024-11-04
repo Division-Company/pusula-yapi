@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function OngoingProjects() {
   return (
-    <div>ongoing-projects</div>
+    <div>BY-Division Company... iki nokta</div>
   )
 }
