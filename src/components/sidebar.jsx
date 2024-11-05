@@ -8,7 +8,6 @@ export default function Sidebar({ activeSection, handleMenuClick }) {
     { label: 'Faaliyet Alanlarımız', path: '/services' },
     { label: 'Referanslarımız', path: '/references' },
     { label: 'Devam Eden Projeler', path: '/ongoing-projects' },
-    { label: 'Süreçler', path: '/processes' },
     { label: 'Kariyer', path: '/careers' },
     { label: 'İletişim', path: '/contact' },
   ]
