@@ -4,7 +4,6 @@ import HomePage from "../components/pages/home";
 import Company from "../components/pages/company";
 import References from "../components/pages/references";
 import OngoingProjects from "../components/pages/ongoing-projects";
-import Processes from "../components/pages/processes";
 import Services from "../components/pages/services";
 import Contact from "../components/pages/contact";
 import Careers from "../components/pages/careers";
@@ -48,13 +47,6 @@ const routes = [
         element: (
             <MainLayout>
                 <OngoingProjects />
-            </MainLayout>
-        ),
-    }, {
-        path: "/processes",
-        element: (
-            <MainLayout>
-                <Processes />
             </MainLayout>
         ),
     }, {
