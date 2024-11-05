@@ -5,21 +5,21 @@ import HomeFooter from "../home/home-footer";
 export default function Home() {
   const photoDataArray = [
     {
-      url: "https://www.gazetekadikoy.com.tr/Uploads/gazetekadikoy.com.tr/202309150915591-img.jpg",
+      url: "https://i.imgur.com/6tCSz9J.gif",
       year: 2021,
       location: "Kayseri",
       name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
       city:"Ankara"
     },
     {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EttD5MTn9hgOD-PrGkB756lnqGE44ZfYQQ&s",
+      url: "https://i.imgur.com/3GJjdkz.gif",
       year: 2020,
       location: "Ankara",
       name: "Ankara Etlik Entegre Sağlık Kampüsü",
       city:"Yozgat"
     },
     {
-      url: "https://assets.cityexperiences.com/wp-content/uploads/2022/12/Golden-Gate-Bridge.jpg",
+      url: "https://i.imgur.com/jkMZy7J.gif",
       year: 2019,
       location: "Yozgat",
       name: "Yozgat Eğitim ve Araştırma Hastanesi",
