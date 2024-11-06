@@ -9,12 +9,12 @@ module.exports = {
       },
       keyframes: {
         verticalPan: {
-          '0%': { transform: 'scale(1.5) translateY(0%)' },      // Başlangıç: %50 zoom, tam ortada
-          '15%': { transform: 'scale(1.25) translateY(-10%)' },   // Zoom %25 seviyesine düşerken yukarı kayma
-          '25%': { transform: 'scale(1.5) translateY(-10%)' },    // Yukarıda tam %50 zoom
-          '50%': { transform: 'scale(1.25) translateY(10%)' },    // Aşağı inerken zoom %25 seviyesine düşme
-          '75%': { transform: 'scale(1.5) translateY(10%)' },     // Aşağıda tam %50 zoom
-          '100%': { transform: 'scale(1.5) translateY(0%)' },     // Başlangıç noktasına geri dönme
+          '0%': { transform: 'scale(1.01) translateY(0%)' },      // Start: 10% zoom
+          '15%': { transform: 'scale(1.2) translateY(-10%)' },    // Scale to 20% and move up
+          '25%': { transform: 'scale(1.3) translateY(-10%)' },    // Scale to 30% at the top
+          '50%': { transform: 'scale(1.2) translateY(10%)' },     // Scale to 20% while moving down
+          '75%': { transform: 'scale(1.3) translateY(10%)' },     // Scale to 30% at the bottom
+          '100%': { transform: 'scale(1.1) translateY(0%)' },     // Return to 10% zoom at the original position
         },
       },
     },

@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckBox from '../CheckBox';
 
 export default function Careers() {
   return (
@@ -74,7 +75,7 @@ export default function Careers() {
             <p>Yukarıda belirtilen prosedür takip edilerek gerçekleştirilen başvuruya en fazla 30 gün içerisinde cevap verilecek olup, talebin reddedilmesi, verilen cevabın yetersiz bulunması veya süresinde başvuruya cevap verilmemesi hâllerinde; cevabın tebliğini takiben 30 (otuz) gün ve herhâlde başvuru tarihinden itibaren 60 (altmış) gün içinde Kişisel Verileri Koruma Kurulu’na şikâyette bulunma hakkı mevcuttur. Ancak mevzuat gereği başvuru yolu tüketilmeden şikâyet yoluna başvurulamaz.
             Kişisel Verileriniz Hususunda İŞVEREN tarafından ÇALIŞAN KİŞİSEL VERİLERİNİN İŞLENMESİNE İLİŞKİN POLİTİKALARI ayrıca paylaşılmış olup, işbu politika, açık onay ve yasal mevzuat dışında kişisel verilerin korunması ve mevzuat dışı kullanılmaması hususunda gerekli özen, dikkat gösterilmekte ve gerekli tedbirler alınmaktadır.</p>
             <br />
-            <p className='text text-2xl font-semibold mb-4'><input type="checkbox"/> “Çalışan Adayı Aydınlatma Metni’ni okudum ve anladım. Kişisel verilerimin Çalışan Adayı Aydınlatma Metni’nde anlatıldığı şekilde işlenmesine izin veriyorum.”
+            <p className='text text-2xl font-semibold mb-4'><CheckBox /> “Çalışan Adayı Aydınlatma Metni’ni okudum ve anladım. Kişisel verilerimin Çalışan Adayı Aydınlatma Metni’nde anlatıldığı şekilde işlenmesine izin veriyorum.”
 
 </p>
         </div>

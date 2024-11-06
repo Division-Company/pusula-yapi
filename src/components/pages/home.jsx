@@ -5,7 +5,7 @@ import HomeFooter from "../home/home-footer";
 export default function Home() {
   const photoDataArray = [
     {
-      url: "https://i.imgur.com/6tCSz9J.gif",
+      url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
       year: 2021,
       location: "Kayseri",
       name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",

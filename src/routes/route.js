@@ -7,6 +7,8 @@ import OngoingProjects from "../components/pages/ongoing-projects";
 import Services from "../components/pages/services";
 import Contact from "../components/pages/contact";
 import Careers from "../components/pages/careers";
+import Form from "../components/pages/formpage"
+import FormPage from "../components/pages/formpage";
 
 const Error = () => {
     return <div>404 Not Found!</div>;
@@ -47,6 +49,13 @@ const routes = [
         element: (
             <MainLayout>
                 <OngoingProjects />
+            </MainLayout>
+        ),
+    }, {
+        path: "/form",
+        element: (
+            <MainLayout>
+                <FormPage />
             </MainLayout>
         ),
     }, {
