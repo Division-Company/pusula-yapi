@@ -1,6 +1,29 @@
+import { useState } from "react";
 import React from 'react';
 
+
+
 function FormPage() {
+  const [file, setFile] = useState(null);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isChecked) {
+      alert("Lütfen onay kutusunu işaretleyin.");
+      return;
+    }
+    // Form gönderme işlemleri burada yapılır.
+    alert("Başvurunuz gönderildi!");
+  };
   return (
     <div className="bg-gray-900 min-h-screen p-6 flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg w-full p-6 space-y-6">
@@ -320,7 +343,7 @@ function FormPage() {
           </thead>
           <tbody>
             {["İlköğretim", "Ortaokul", "Lise/ Meslek", "Üniversite", "Yüksek Lisans Ve Üzeri"].map((level, index) => (
-              <tr key={index} className="bg-white">
+              <tr key={index} className="bg-white text-gray-600">
                 <td className="p-3 border">
                   <input type="text" className="w-full p-2 rounded border" placeholder={`${level} Okul Adı/Şehir`} />
                 </td>
@@ -874,7 +897,44 @@ function FormPage() {
           ></textarea>
         </div>
       </div>
-      
+      <form onSubmit={handleSubmit} className="p-4 bg-gray-100 space-y-6 text-gray-600">
+      {/* Dosya Ekle */}
+      <div className="border border-gray-300 p-4 rounded">
+        <label className="block mb-2 font-bold">Dosya Ekle</label>
+        <input
+          type="file"
+          onChange={handleFileChange}
+          className="block border p-2 w-full"
+        />
+        {file && <p className="mt-2 text-gray-600">Seçilen Dosya: {file.name}</p>}
+      </div>
+
+      {/* Onay Kutusu ve Açıklama */}
+      <div className="flex items-start space-x-2">
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+          className="mt-1"
+        />
+        <p className="text-sm text-gray-700">
+          İş Başvuru Formu'nda paylaştığım bana ait olmayan tüm kişisel veriler
+          (referanslar, eski yöneticilerim…) için ilgili kişisel veri
+          sahiplerinden gerekli tüm izinleri aldığımı ve bu verileri kimlerle ve
+          neden paylaştığım da dahil olmak üzere ilgili kişilerin bilgisi
+          dahilinde paylaştığımı beyan ederim. İş bu hususta Metal Yapı'nın
+          hiçbir sorumluluğu olmayıp, tüm sorumluluk bana aittir.
+        </p>
+      </div>
+
+      {/* Başvuru Butonu */}
+      <button
+        type="submit"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Başvur
+      </button>
+    </form>
       </div>
     </div>
   );

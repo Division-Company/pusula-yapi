@@ -2,7 +2,7 @@ import React from 'react';
 
 function HeroSection() {
   return (
-    <div className="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: "url('https://i.imgur.com/V8FlLln.png')" }}>
+    <div className="relative flex items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: "url('https://i.imgur.com/V8FlLln.png')" }}>
       {/* Siyah Opak Katman */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
       
