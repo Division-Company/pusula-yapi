@@ -1,72 +1,146 @@
 import React from 'react';
+import { Field, ErrorMessage } from 'formik';
 
 function PersonalInfo() {
   return (
     <div className="text-gray-600 p-6 rounded-lg shadow-md mx-auto">
       <h2 className="text-gray-600 text-xl font-semibold mb-6">2. Kişisel Bilgiler</h2>
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block font-medium mb-1">Adı</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Adınız" />
+          <Field
+            name="personalInfo.firstName"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Adınız"
+          />
+          <ErrorMessage name="personalInfo.firstName" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Soyadı</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Soyadınız" />
+          <Field
+            name="personalInfo.lastName"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Soyadınız"
+          />
+          <ErrorMessage name="personalInfo.lastName" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Doğum Yeri</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Doğum Yeriniz" />
+          <Field
+            name="personalInfo.birthPlace"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Doğum Yeriniz"
+          />
+          <ErrorMessage name="personalInfo.birthPlace" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Doğum Tarihi</label>
-          <input type="date" className="w-full p-2 rounded border" />
+          <Field
+            name="personalInfo.birthDate"
+            type="date"
+            className="w-full p-2 rounded border"
+          />
+          <ErrorMessage name="personalInfo.birthDate" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Cinsiyetiniz</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Cinsiyetiniz" />
+          <Field
+            name="personalInfo.gender"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Cinsiyetiniz"
+          />
+          <ErrorMessage name="personalInfo.gender" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Cep Telefon</label>
-          <input type="tel" className="w-full p-2 rounded border" placeholder="Cep Telefonu" />
+          <Field
+            name="personalInfo.phone"
+            type="tel"
+            className="w-full p-2 rounded border"
+            placeholder="Cep Telefonu"
+          />
+          <ErrorMessage name="personalInfo.phone" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Medeni Hali</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Medeni Haliniz" />
+          <Field
+            name="personalInfo.maritalStatus"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Medeni Haliniz"
+          />
+          <ErrorMessage name="personalInfo.maritalStatus" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Çocuk Sayısı</label>
-          <input type="number" className="w-full p-2 rounded border" placeholder="Çocuk Sayısı" />
+          <Field
+            name="personalInfo.numberOfChildren"
+            type="number"
+            className="w-full p-2 rounded border"
+            placeholder="Çocuk Sayısı"
+          />
+          <ErrorMessage name="personalInfo.numberOfChildren" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div className="md:col-span-2">
           <label className="block font-medium mb-1">Ev Adresiniz</label>
-          <textarea className="w-full p-2 rounded border" rows="3" placeholder="Ev Adresiniz"></textarea>
+          <Field
+            as="textarea"
+            name="personalInfo.address"
+            className="w-full p-2 rounded border"
+            rows="3"
+            placeholder="Ev Adresiniz"
+          />
+          <ErrorMessage name="personalInfo.address" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">E-mail 1</label>
-          <input type="email" className="w-full p-2 rounded border" placeholder="E-mail 1" />
+          <Field
+            name="personalInfo.email1"
+            type="email"
+            className="w-full p-2 rounded border"
+            placeholder="E-mail 1"
+          />
+          <ErrorMessage name="personalInfo.email1" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">E-mail 2</label>
-          <input type="email" className="w-full p-2 rounded border" placeholder="E-mail 2" />
+          <Field
+            name="personalInfo.email2"
+            type="email"
+            className="w-full p-2 rounded border"
+            placeholder="E-mail 2"
+          />
+          <ErrorMessage name="personalInfo.email2" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Sürücü Ehliyetiniz Var Mı?</label>
           <div className="flex items-center space-x-4">
             <label className="flex items-center">
-              <input type="radio" name="ehliyet" value="evet" className="mr-2" />
+              <Field type="radio" name="personalInfo.hasLicense" value="evet" className="mr-2" />
               Evet
             </label>
             <label className="flex items-center">
-              <input type="radio" name="ehliyet" value="hayir" className="mr-2" />
+              <Field type="radio" name="personalInfo.hasLicense" value="hayir" className="mr-2" />
               Hayır
             </label>
           </div>
+          <ErrorMessage name="personalInfo.hasLicense" component="div" className="text-red-500 text-sm mt-1" />
         </div>
         <div>
           <label className="block font-medium mb-1">Varsa sınıfını belirtiniz.</label>
-          <input type="text" className="w-full p-2 rounded border" placeholder="Ehliyet Sınıfı" />
+          <Field
+            name="personalInfo.licenseClass"
+            type="text"
+            className="w-full p-2 rounded border"
+            placeholder="Ehliyet Sınıfı"
+          />
+          <ErrorMessage name="personalInfo.licenseClass" component="div" className="text-red-500 text-sm mt-1" />
         </div>
-      </form>
+      </div>
     </div>
   );
 }

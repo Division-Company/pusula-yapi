@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom";
 import MainLayout from "../layouts/main";
+import PrivateRoute from "./PrivateRoute"
 import HomePage from "../components/pages/home";
 import Company from "../components/pages/company";
 import References from "../components/pages/references";
@@ -9,6 +10,8 @@ import Contact from "../components/pages/contact";
 import Careers from "../components/pages/careers";
 import Form from "../components/pages/formpage"
 import FormPage from "../components/pages/formpage";
+import AdminLogin from "../components/pages/admin-login";
+import AdminPage from "../components/pages/admin-page";
 
 const Error = () => {
     return <div>404 Not Found!</div>;
@@ -75,13 +78,24 @@ const routes = [
         ),
     },
     {
+        path: "/admin",
+        element: <AdminLogin />,
+    }, {
+        path: "/admin-page",
+        element: (
+            <PrivateRoute>
+                <AdminPage />
+            </PrivateRoute>
+        ),
+    },
+    {
         path: "/not-found",
         element: <Error />,
     },
 
     {
         path: "*",
-        element: <Navigate to="/not-found" />, // 404 sayfasına yönlendirme
+        element: <Navigate to="/not-found" />,
     },
 ];
 
