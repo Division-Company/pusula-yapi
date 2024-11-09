@@ -10,8 +10,8 @@ import Contact from "../components/pages/contact";
 import Careers from "../components/pages/careers";
 import Form from "../components/pages/formpage"
 import FormPage from "../components/pages/formpage";
-import AdminLogin from "../components/pages/admin-login";
-import AdminPage from "../components/pages/admin-page";
+import AdminLogin from "../components/pages/admin/admin-login";
+import AdminPage from "../components/pages/admin/admin-page";
 
 const Error = () => {
     return <div>404 Not Found!</div>;

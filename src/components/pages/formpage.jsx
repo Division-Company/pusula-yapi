@@ -37,32 +37,7 @@ const handleFormSubmit = async (values, { setSubmitting }) => {
 function FormPage() {
   return (
     <Formik
-      initialValues={{
-        applicationInfo: {
-          department: '', // Boş string kullanarak undefined olmamasını sağlıyoruz
-          jobTitle: '',
-          jobCode: '',
-          reasonForApplication: '',
-          requestedSalary: '',
-          startDate: '',
-          currentlyWorking: '',
-          currentCompanyDetails: '',
-          overtimeAcceptance: '',
-        },
-        personalInfo: {
-          firstName: '',
-          lastName: '',
-          // Diğer alanları da boş string veya uygun başlangıç değerleri olarak ayarlayın
-        },
-        healthInfo: {
-          height: '',
-          weight: '',
-          chronicDisease: '',
-          physicalDisability: '',
-          phobias: '',
-        },
-        // Diğer bölümler için de aynı düzenlemeyi yapın
-      }}
+      j
       // validationSchema={validationFormPageSchema}
       onSubmit={handleFormSubmit}
     >
