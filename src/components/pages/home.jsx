@@ -2,33 +2,33 @@ import React, { useState, useEffect } from 'react';
 import HomeHeader from "../home/home-header";
 import HomeFooter from "../home/home-footer";
 
-export default function Home() {
-  const photoDataArray = [
-    {
-      url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
-      year: 2021,
-      location: "Kayseri",
-      name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
-      city:"Ankara"
-    },
-    {
-      url: "https://i.imgur.com/3GJjdkz.gif",
-      year: 2020,
-      location: "Ankara",
-      name: "Ankara Etlik Entegre Sağlık Kampüsü",
-      city:"Yozgat"
-    },
-    {
-      url: "https://i.imgur.com/jkMZy7J.gif",
-      year: 2019,
-      location: "Yozgat",
-      name: "Yozgat Eğitim ve Araştırma Hastanesi",
-      city:"Kayseri"
-    },
-  ];
+// Move photoDataArray outside of the component to avoid re-creation on each render
+const photoDataArray = [
+  {
+    url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
+    year: 2021,
+    location: "Kayseri",
+    name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/3GJjdkz.gif",
+    year: 2020,
+    location: "Ankara",
+    name: "Ankara Etlik Entegre Sağlık Kampüsü",
+    city: "Yozgat"
+  },
+  {
+    url: "https://i.imgur.com/jkMZy7J.gif",
+    year: 2019,
+    location: "Yozgat",
+    name: "Yozgat Eğitim ve Araştırma Hastanesi",
+    city: "Kayseri"
+  },
+];
 
+export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentPhotoData, setCurrentPhotoData] = useState(photoDataArray[0]);
   const [animateImage, setAnimateImage] = useState(true); // Animasyon durumu
 
   useEffect(() => {
@@ -36,11 +36,7 @@ export default function Home() {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % photoDataArray.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [photoDataArray.length]);
-
-  useEffect(() => {
-    setCurrentPhotoData(photoDataArray[currentIndex]);
-  }, [currentIndex, photoDataArray]);
+  }, []); // Dependency array simplified to run once
 
   useEffect(() => {
     // Sayfa açıldıktan 2 saniye sonra küçülme animasyonu başlar
@@ -49,6 +45,8 @@ export default function Home() {
     }, 500);
     return () => clearTimeout(timer); // Temizlik işlemi
   }, []);
+
+  const currentPhotoData = photoDataArray[currentIndex];
 
   return (
     <div className="flex flex-col relative h-screen bg-gray-900">
@@ -76,7 +74,7 @@ export default function Home() {
 
           {/* Bilgi Kutusu */}
           {!animateImage && (
-            <div className="absolute top-2 right-1 bg-gray-800 p-3 shadow-lg rounded-lg border border-gray-700  flex flex-col items-center justify-center">
+            <div className="absolute top-2 right-1 bg-gray-800 p-3 shadow-lg rounded-lg border border-gray-700 flex flex-col items-center justify-center">
               <h2 className="text-blue-400 font-semibold text-md">{currentPhotoData.name}</h2>
             </div>
           )}
