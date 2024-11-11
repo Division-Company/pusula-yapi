@@ -4,21 +4,39 @@ export default function OngoingProjects() {
   const projeler = [
     {
       id: 1,
-      isim: 'Proje Adı 1',
+      isim: 'Bodrum Güllük',
       aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
-      resim: 'https://via.placeholder.com/300', // Örnek resim URL'si
+      resim: 'https://i.imgur.com/xeWecIe.jpeg', // Örnek resim URL'si
     },
     {
       id: 2,
-      isim: 'Proje Adı 2',
+      isim: 'Batı Koleji Batıkent',
       aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
-      resim: 'https://via.placeholder.com/300',
+      resim: 'https://i.imgur.com/ITUX6sL.jpeg',
     },
     {
       id: 3,
-      isim: 'Proje Adı 3',
+      isim: 'Ankara Nokta Şara Grup',
       aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
-      resim: 'https://via.placeholder.com/300',
+      resim: 'https://i.imgur.com/15CT6Hw.jpeg',
+    },
+    {
+      id: 4,
+      isim: 'Kutaylar AŞ  Renault Bayii Fethiye',
+      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
+      resim: 'https://imgur.com/P5kERR4.jpeg',
+    },
+    {
+      id: 5,
+      isim: 'Muğla Ortaca Çok Amaçlı Salonlar',
+      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
+      resim: 'https://i.imgur.com/6ouINg2.jpeg',
+    },
+    {
+      id: 6,
+      isim: 'Fethiye Özyer Merkez Ofis',
+      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
+      resim: 'https://i.imgur.com/WK1jgOi.png',
     },
   ];
 
