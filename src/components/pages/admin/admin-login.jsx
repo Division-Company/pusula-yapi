@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase";
+import toast from "react-hot-toast"; // Import the toast function
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -13,17 +14,18 @@ const AdminLogin = () => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            alert('Giriş başarılı!');
-            navigate('/admin-page'); // Giriş başarılıysa admin sayfasına yönlendir
+            toast.success('Giriş başarılı!'); // Success toast
+            navigate('/admin/applications');
         } catch (err) {
             setError('Geçersiz kullanıcı adı veya şifre!');
+            toast.error('Geçersiz kullanıcı adı veya şifre!'); // Error toast
             console.error('Firebase auth hatası:', err);
         }
     };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
+            <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-96">
                 <h2 className="text-xl font-bold mb-4">Admin Girişi</h2>
                 {error && <div className="text-red-500 mb-4">{error}</div>}
                 <div className="mb-4">

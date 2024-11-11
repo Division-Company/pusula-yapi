@@ -1,6 +1,6 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/main";
-import PrivateRoute from "./PrivateRoute"
+import PrivateRoute from "./PrivateRoute";
 import HomePage from "../components/pages/home";
 import Company from "../components/pages/company";
 import References from "../components/pages/references";
@@ -8,14 +8,12 @@ import OngoingProjects from "../components/pages/ongoing-projects";
 import Services from "../components/pages/services";
 import Contact from "../components/pages/contact";
 import Careers from "../components/pages/careers";
-import Form from "../components/pages/formpage"
 import FormPage from "../components/pages/formpage";
 import AdminLogin from "../components/pages/admin/admin-login";
 import AdminPage from "../components/pages/admin/admin-page";
-
-const Error = () => {
-    return <div>404 Not Found!</div>;
-};
+import CVDetailsPage from "../components/pages/admin/CVDetailsPage";
+import AdminLayout from "../layouts/adminlayout";
+import ErrorPage from "../components/ErrorPage"
 
 const routes = [
     {
@@ -33,35 +31,40 @@ const routes = [
                 <Company />
             </MainLayout>
         ),
-    }, {
+    },
+    {
         path: "/services",
         element: (
             <MainLayout>
                 <Services />
             </MainLayout>
         ),
-    }, {
+    },
+    {
         path: "/references",
         element: (
             <MainLayout>
                 <References />
             </MainLayout>
         ),
-    }, {
+    },
+    {
         path: "/ongoing-projects",
         element: (
             <MainLayout>
                 <OngoingProjects />
             </MainLayout>
         ),
-    }, {
+    },
+    {
         path: "/form",
         element: (
             <MainLayout>
                 <FormPage />
             </MainLayout>
         ),
-    }, {
+    },
+    {
         path: "/careers",
         element: (
             <MainLayout>
@@ -80,19 +83,25 @@ const routes = [
     {
         path: "/admin",
         element: <AdminLogin />,
-    }, {
-        path: "/admin-page",
+    },
+    {
+        path: "/admin/*",
         element: (
             <PrivateRoute>
-                <AdminPage />
+                <AdminLayout>
+                    <Routes>
+                        <Route path="applications" element={<AdminPage />} />
+                        <Route path="cv-details/:id" element={<CVDetailsPage />} />
+                        <Route path="*" element={<Navigate to="/not-found" />} />
+                    </Routes>
+                </AdminLayout>
             </PrivateRoute>
         ),
     },
     {
         path: "/not-found",
-        element: <Error />,
+        element: <ErrorPage />,
     },
-
     {
         path: "*",
         element: <Navigate to="/not-found" />,

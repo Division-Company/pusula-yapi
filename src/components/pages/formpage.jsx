@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast'; // react-hot-toast'dan toast import edildi
 import validationFormPageSchema from '../../schemes/validationFormPage';
 import ApplicationInfo from '../form/ApplicationInfo';
 import PersonalInfo from '../form/PersonalInfo';
@@ -13,7 +15,8 @@ import ReferenceInfo from '../form/ReferenceInfo';
 import WorkExperience from '../form/WorkExperience';
 import FileUpload from '../form/FileUploadForm';
 import { db } from '../../firebase';
-import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
+import initialValues from "../../utils/initialValues";
 
 const sanitizeValues = (values) => {
   return JSON.parse(JSON.stringify(values, (key, value) => (value === undefined ? null : value)));
@@ -21,15 +24,26 @@ const sanitizeValues = (values) => {
 
 const handleFormSubmit = async (values, { setSubmitting }) => {
   try {
-    // `values` nesnesindeki `undefined` alanları `null` yapın
-    const sanitizedValues = sanitizeValues(values);
+    // `applicationDate` alanını şu anki tarih ve saat olarak ayarla
+    const sanitizedValues = {
+      ...sanitizeValues(values),
+      applicationDate: new Date().toISOString(),
+    };
 
     // Verileri Firestore'a kaydedin
     await setDoc(doc(db, 'applications', new Date().toISOString()), sanitizedValues);
-    alert('Form başarıyla gönderildi!');
+
+    // Başarı mesajını react-hot-toast ile göster
+    toast.success('Başvurunuz başarıyla gönderildi!');
+
+    // 2 saniye sonra kariyer sayfasına yönlendir
+    setTimeout(() => {
+      window.location.href = '/careers';
+    }, 2000);
+
   } catch (error) {
     console.error('Form gönderme hatası:', error);
-    alert('Form gönderilirken bir hata oluştu.');
+    toast.error('Form gönderilirken bir hata oluştu.');
   }
   setSubmitting(false);
 };
@@ -37,7 +51,7 @@ const handleFormSubmit = async (values, { setSubmitting }) => {
 function FormPage() {
   return (
     <Formik
-      j
+      initialValues={initialValues}
       // validationSchema={validationFormPageSchema}
       onSubmit={handleFormSubmit}
     >

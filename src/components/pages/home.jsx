@@ -56,8 +56,8 @@ export default function Home() {
       <img
         src={require(`../assets/${currentPhotoData.city}.png`)}
         className={`bg-center transition-all duration-[2000ms] ease-out ${animateImage
-            ? 'absolute inset-0 w-full h-[90%] mt-11' // Tüm ekranı kaplayan
-            : 'absolute w-[23%] shadow-2xl rounded-lg  h-[18%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
+          ? 'absolute inset-0 w-full h-[90%] mt-11' // Tüm ekranı kaplayan
+          : 'absolute w-[23%] shadow-2xl rounded-lg  h-[18%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
           } z-10`}
       />
 
