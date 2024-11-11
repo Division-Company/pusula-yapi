@@ -5,37 +5,31 @@ export default function OngoingProjects() {
     {
       id: 1,
       isim: 'Bodrum Güllük',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://i.imgur.com/xeWecIe.jpeg', // Örnek resim URL'si
     },
     {
       id: 2,
       isim: 'Batı Koleji Batıkent',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://i.imgur.com/ITUX6sL.jpeg',
     },
     {
       id: 3,
       isim: 'Ankara Nokta Şara Grup',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://i.imgur.com/15CT6Hw.jpeg',
     },
     {
       id: 4,
       isim: 'Kutaylar AŞ  Renault Bayii Fethiye',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://imgur.com/P5kERR4.jpeg',
     },
     {
       id: 5,
       isim: 'Muğla Ortaca Çok Amaçlı Salonlar',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://i.imgur.com/6ouINg2.jpeg',
     },
     {
       id: 6,
       isim: 'Fethiye Özyer Merkez Ofis',
-      aciklama: 'Bu, devam eden projelerden biri hakkında kısa bir açıklama.',
       resim: 'https://i.imgur.com/WK1jgOi.png',
     },
   ];
@@ -56,7 +50,6 @@ export default function OngoingProjects() {
             />
             <div className="p-4">
               <h2 className="text-2xl font-semibold mb-2">{proje.isim}</h2>
-              <p className="text-gray-400 mb-4">{proje.aciklama}</p>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
           </div>
