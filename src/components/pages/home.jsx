@@ -5,12 +5,77 @@ import HomeFooter from "../home/home-footer";
 // Move photoDataArray outside of the component to avoid re-creation on each render
 const photoDataArray = [
   {
+    url: "https://i.imgur.com/3GJjdkz.gif",
+    year: 2020,
+    location: "Ankara",
+    name: "Ankara Etlik Entegre Sağlık Kampüsü",
+    city: "Ankara"
+  },
+
+  {
+    url: "https://i.imgur.com/jkMZy7J.gif",
+    year: 2019,
+    url: "https://i.imgur.com/lnjwL6q.gif",
+    location: "Yozgat",
+    name: "Yozgat Eğitim ve Araştırma Hastanesi",
+    city: "Yozgat"
+  },
+  {
+    url: "https://i.imgur.com/FUCV6Wg.gif",
+    location: "Adana",
+    name: "Adana Entegre Sağlık Kampüsü",
+    city: "Adana"
+  },
+  {
+    url: "https://i.imgur.com/piohHCu.gif",
+    location: "Elazığ",
+    name: "Elazığ Entegre Sağlık Kampüsü",
+    city: "Elazig"
+  },
+  {
+    url: "https://i.imgur.com/UEARwnT.gif",
+    location: "Ankara",
+    name: "Türkiye Barolar Birliği Hizmet Binası ve Sosyal Tesisleri",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/tunYkMB.gif",
+    location: "Ankara",
+    name: "T.B.M.M. Alüminyum Doğrama ve Yenileme",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/pb92Xix.gif",
+    location: "Ankara",
+    name: "Elvankent Gimsa",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/amJ13xo.gif",
+    location: "Ankara",
+    name: "Devlet Mahallesi Gimsa",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/i3GCYJk.gif",
+    location: "Ankara",
+    name: "Atayıldız Plaza 1",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/6X4mNDc.gif",
+    location: "Ankara",
+    name: "Atayıldız Plaza 2",
+    city: "Ankara"
+  },
+  {
+    url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
+    year: 2021,
     url: "https://i.imgur.com/OGovwwP.gif",
     location: "Kayseri",
     name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
     city: "Kayseri"
   },
-  // Diğer veri öğeleri burada...
 ];
 
 export default function Home() {
