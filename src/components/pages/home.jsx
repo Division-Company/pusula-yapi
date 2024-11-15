@@ -5,25 +5,70 @@ import HomeFooter from "../home/home-footer";
 // Move photoDataArray outside of the component to avoid re-creation on each render
 const photoDataArray = [
   {
-    url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
-    year: 2021,
+    url: "https://i.imgur.com/OGovwwP.gif",
     location: "Kayseri",
     name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
-    city: "Ankara"
+    city: "Kayseri"
   },
   {
     url: "https://i.imgur.com/3GJjdkz.gif",
-    year: 2020,
     location: "Ankara",
     name: "Ankara Etlik Entegre Sağlık Kampüsü",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/lnjwL6q.gif",
+    location: "Yozgat",
+    name: "Yozgat Eğitim ve Araştırma Hastanesi",
     city: "Yozgat"
   },
   {
-    url: "https://i.imgur.com/jkMZy7J.gif",
-    year: 2019,
-    location: "Yozgat",
-    name: "Yozgat Eğitim ve Araştırma Hastanesi",
-    city: "Kayseri"
+    url: "https://i.imgur.com/FUCV6Wg.gif",
+    location: "Adana",
+    name: "Adana Entegre Sağlık Kampüsü",
+    city: "Adana"
+  },
+  {
+    url: "https://i.imgur.com/piohHCu.gif",
+    location: "Elazığ",
+    name: "Elazığ Entegre Sağlık Kampüsü",
+    city: "Elazig"
+  },
+  {
+    url: "https://i.imgur.com/UEARwnT.gif",
+    location: "Ankara",
+    name: "Türkiye Barolar Birliği Hizmet Binası ve Sosyal Tesisleri",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/tunYkMB.gif",
+    location: "Ankara",
+    name: "T.B.M.M. Alüminyum Doğrama ve Yenileme",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/pb92Xix.gif",
+    location: "Ankara",
+    name: "Elvankent Gimsa",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/amJ13xo.gif",
+    location: "Ankara",
+    name: "Devlet Mahallesi Gimsa",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/i3GCYJk.gif",
+    location: "Ankara",
+    name: "Atayıldız Plaza 1",
+    city: "Ankara"
+  },
+  {
+    url: "https://i.imgur.com/6X4mNDc.gif",
+    location: "Ankara",
+    name: "Atayıldız Plaza 2",
+    city: "Ankara"
   },
 ];
 
@@ -57,7 +102,7 @@ export default function Home() {
         src={require(`../assets/${currentPhotoData.city}.png`)}
         className={`bg-center transition-all duration-[2000ms] ease-out ${animateImage
           ? 'absolute inset-0 w-full h-[90%] mt-11' // Tüm ekranı kaplayan
-          : 'absolute w-[23%] shadow-2xl rounded-lg  h-[18%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
+          : 'absolute w-[15%] shadow-2xl rounded-lg  h-[18%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde
           } z-10`}
       />
 

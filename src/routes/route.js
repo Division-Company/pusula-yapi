@@ -13,7 +13,8 @@ import AdminLogin from "../components/pages/admin/admin-login";
 import AdminPage from "../components/pages/admin/admin-page";
 import CVDetailsPage from "../components/pages/admin/CVDetailsPage";
 import AdminLayout from "../layouts/adminlayout";
-import ErrorPage from "../components/ErrorPage"
+import ErrorPage from "../components/ErrorPage";
+import Imagedetail from "../components/pages/imgdetail"
 
 const routes = [
     {
@@ -53,6 +54,14 @@ const routes = [
         element: (
             <MainLayout>
                 <OngoingProjects />
+            </MainLayout>
+        ),
+    },
+    {
+        path: "/img-detail/:id",
+        element: (
+            <MainLayout>
+                <Imagedetail />
             </MainLayout>
         ),
     },

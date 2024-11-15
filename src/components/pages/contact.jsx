@@ -1,26 +1,57 @@
 import React from 'react'
+import logo from '../assets/logo.png';
+
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      {/* Logo Section */}
-      <div className="mb-8 text-center">
-        <img src={require('../assets/logo.png')} alt="Pusula Group Logo" className="h-20 mb-4" />
-        <h1 className="text-4xl font-bold text-orange-500">Pusula Group</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      {/* Logo */}
+      <div className="mb-8">
+        <img src={logo} alt="Logo" className="w-[500px] h-[150px]" /> {/* Logonun bulunduğu yer */}
       </div>
-
-      {/* Contact Information Section in Full-Width Box */}
-      <div className="w-full max-w-7xl bg-gray-800 text-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-orange-400 mb-6 text-center">İletişim</h2>
-        <p className="text-lg font-semibold mb-4 text-center">
-          <span className="block">İvedik OSB. Mahallesi</span>
-          <span className="block">1476 Cadde No: 8/26</span>
-          <span className="block">Yenimahalle/ANKARA</span>
-        </p>
-        <div className="text-lg font-semibold text-center">
-          <p className="text-orange-400 mb-2">Telefon:</p>
-          <p className="hover:text-orange-400 cursor-pointer transition-colors">+90 312 394 43 21</p>
-          <p className="hover:text-orange-400 cursor-pointer transition-colors">+90 312 394 43 22</p>
-          <p className="hover:text-orange-400 cursor-pointer transition-colors">info@pusulayapi.com.tr</p>
+      
+      {/* İçerik ve Harita Bölümü */}
+      <div className="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12 p-8 bg-white shadow-lg rounded-lg max-w-4xl w-full">
+        
+        {/* İletişim Bilgileri */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">İletişim Bilgileri</h2>
+          <p className="text-gray-600 mb-4">Bize aşağıdaki iletişim bilgilerinden ulaşabilirsiniz.</p>
+          
+          <div className="text-gray-700 space-y-2">
+            <div className="flex items-center">
+              <span className="text-blue-500 mr-2">📞</span>
+              <a href="tel:+903123944321" className="hover:underline hover:text-orange-400 cursor-pointer transition-colors">+90 (312) 394 43 21</a>
+            </div>
+            <div className="flex items-center">
+              <span className="text-blue-500 mr-2">📞</span>
+              <a href="tel:+903123944322" className="hover:underline hover:text-orange-400 cursor-pointer transition-colors">+90 (312) 394 43 22</a>
+            </div>
+            <div className="flex items-center">
+              <span className="text-blue-500 mr-2">✉️</span>
+              <a href="mailto:info@pusulaalüminyum.com.tr" className="hover:underline hover:text-orange-400 cursor-pointer transition-colors">
+                info@pusulaalüminyum.com.tr
+              </a>{' '}
+            </div>
+            <div className="flex items-center">
+            <span className="text-blue-500 mr-2">📍</span>
+            <a href="https://maps.app.goo.gl/FgKdATyPsovXhqWP6" className="hover:underline hover:text-orange-400 cursor-pointer transition-colors" >İvedik OSB. Mahallesi 1476 Cadde No: 8/26 Yenimahalle/ANKARA</a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Harita */}
+        <div className="w-full lg:w-auto">
+          <iframe
+            title="Google Map Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.2180194899437!2d32.84504817608161!3d39.96462037941996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f5ecb1b37b3%3A0xb66d52ab8d020b93!2sAz%C4%B1k%20Sk.%20No%3A4%2C%2006010%20Ke%C3%A7i%C3%B6ren%2FAnkara!5e0!3m2!1str!2str!4v1690000000000!5m2!1str!2str"
+            width="400"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            className="rounded-md shadow-lg"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

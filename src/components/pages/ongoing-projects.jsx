@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function OngoingProjects() {
+  const navigate = useNavigate();
+
   const projeler = [
     {
       id: 1,
       isim: 'Bodrum Güllük',
-      resim: 'https://i.imgur.com/xeWecIe.jpeg', // Örnek resim URL'si
+      resim: 'https://i.imgur.com/xeWecIe.jpeg',
     },
     {
       id: 2,
@@ -41,7 +44,12 @@ export default function OngoingProjects() {
         {projeler.map((proje) => (
           <div
             key={proje.id}
-            className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            onClick={() =>
+              navigate(`/img-detail/${proje.id}`, {
+                state: { proje },
+              })
+            }
+            className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
           >
             <img
               src={proje.resim}
@@ -57,4 +65,4 @@ export default function OngoingProjects() {
       </div>
     </div>
   );
-};
+}
