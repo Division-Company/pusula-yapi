@@ -10,7 +10,7 @@ export default function Contact() {
       </div>
 
       {/* İçerik ve Harita Bölümü */}
-      <div className="border-orange-500 border-2 shadow-2xl flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12 p-4 sm:p-8 bg-slate-500 text-white rounded-lg max-w-4xl w-full">
+      <div className="border-slate-700 border-2 shadow-2xl flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12 p-4 sm:p-8 bg-slate-500 text-white rounded-lg max-w-4xl w-full">
         
         {/* İletişim Bilgileri */}
         <div className="w-full lg:w-1/2">

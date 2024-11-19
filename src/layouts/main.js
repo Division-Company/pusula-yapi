@@ -41,7 +41,7 @@ const MainLayout = ({ children }) => {
             {/* Sidebar */}
             <div
                 className={`sidebar fixed z-30 lg:relative  transform lg:transform-none transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : '-translate-x-full'
-                    } lg:translate-x-0 h-full w-64 bg-slate-500 border-r-2 border-orange-500 border-b-2`}
+                    } lg:translate-x-0 h-full w-64 bg-slate-500 border-r-2 border-slate-700 border-b-2`}
             >
                 <Sidebar activeSection={activeSection} menuOpen={menuOpen} handleMenuClick={handleMenuClick} />
             </div>
