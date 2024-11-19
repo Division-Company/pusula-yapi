@@ -6,8 +6,18 @@ module.exports = {
     extend: {
       animation: {
         'vertical-pan': 'verticalPan 15s ease-in-out infinite',
+        'swipe-left': 'swipeLeft 0.7s ease-in-out forwards',
+        'swipe-right': 'swipeRight 0.7s ease-in-out forwards',
       },
       keyframes: {
+        swipeLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        swipeRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         verticalPan: {
           '0%': { transform: 'scale(1.01) translateY(0%)' },      // Start: 10% zoom
           '15%': { transform: 'scale(1.2) translateY(-10%)' },    // Scale to 20% and move up
