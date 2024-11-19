@@ -34,7 +34,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white">
-      <HomeHeader />
 
       <main className="flex-1 flex items-center justify-center">
         <div className="relative w-full h-full border-4 border-gray-700 rounded-lg overflow-hidden">
@@ -46,8 +45,8 @@ export default function Home() {
 
           {/* Info Box */}
           <div className="absolute top-4 right-4 bg-black bg-opacity-70 p-4 rounded-md shadow-md">
-            <h2 className="text-lg font-bold text-blue-400">{currentPhotoData.name}</h2>
-            <p className="text-sm text-gray-300">{currentPhotoData.location}</p>
+            <h2 className="text-lg font-bold text-white text-opacity-70">{currentPhotoData.name}</h2>
+            <p className="text-sm text-white text-opacity-50">{currentPhotoData.location}</p>
           </div>
 
           {/* Controls */}
@@ -77,7 +76,6 @@ export default function Home() {
         </div>
       </main>
 
-      <HomeFooter />
     </div>
   );
 }
