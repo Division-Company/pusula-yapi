@@ -1,138 +1,93 @@
-import React, { useState, useEffect } from 'react';
-import HomeHeader from "../home/home-header";
-import HomeFooter from "../home/home-footer";
-
-// Move photoDataArray outside of the component to avoid re-creation on each render
-const photoDataArray = [
-  {
-    url: "https://i.imgur.com/3GJjdkz.gif",
-    year: 2020,
-    location: "Ankara",
-    name: "Ankara Etlik Entegre Sağlık Kampüsü",
-    city: "Ankara"
-  },
-
-  {
-    url: "https://i.imgur.com/jkMZy7J.gif",
-    year: 2019,
-    url: "https://i.imgur.com/lnjwL6q.gif",
-    location: "Yozgat",
-    name: "Yozgat Eğitim ve Araştırma Hastanesi",
-    city: "Yozgat"
-  },
-  {
-    url: "https://i.imgur.com/FUCV6Wg.gif",
-    location: "Adana",
-    name: "Adana Entegre Sağlık Kampüsü",
-    city: "Adana"
-  },
-  {
-    url: "https://i.imgur.com/piohHCu.gif",
-    location: "Elazığ",
-    name: "Elazığ Entegre Sağlık Kampüsü",
-    city: "Elazig"
-  },
-  {
-    url: "https://i.imgur.com/UEARwnT.gif",
-    location: "Ankara",
-    name: "Türkiye Barolar Birliği Hizmet Binası ve Sosyal Tesisleri",
-    city: "Ankara"
-  },
-  {
-    url: "https://i.imgur.com/tunYkMB.gif",
-    location: "Ankara",
-    name: "T.B.M.M. Alüminyum Doğrama ve Yenileme",
-    city: "Ankara"
-  },
-  {
-    url: "https://i.imgur.com/pb92Xix.gif",
-    location: "Ankara",
-    name: "Elvankent Gimsa",
-    city: "Ankara"
-  },
-  {
-    url: "https://i.imgur.com/amJ13xo.gif",
-    location: "Ankara",
-    name: "Devlet Mahallesi Gimsa",
-    city: "Ankara"
-  },
-  {
-    url: "https://i.imgur.com/i3GCYJk.gif",
-    location: "Ankara",
-    name: "Atayıldız Plaza 1",
-    city: "Ankara"
-  },
-  {
-    url: "https://i.imgur.com/6X4mNDc.gif",
-    location: "Ankara",
-    name: "Atayıldız Plaza 2",
-    city: "Ankara"
-  },
-  {
-    url: "https://images3.alphacoders.com/135/thumb-1920-1350069.jpeg",
-    year: 2021,
-    url: "https://i.imgur.com/OGovwwP.gif",
-    location: "Kayseri",
-    name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu",
-    city: "Kayseri"
-  },
-];
+import React, { useState, useMemo } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useSwipeable } from "react-swipeable";
 
 export default function Home() {
+  const photoDataArray = useMemo(() => [
+    { url: "https://i.imgur.com/iln8oeM.png", location: "Ankara", name: "Atayıldız Plaza 1"},
+    { url: "https://i.imgur.com/2nL9lwD.png", year: 2020, location: "Ankara", name: "Ankara Etlik Entegre Sağlık Kampüsü" },
+    { url: "https://i.imgur.com/U0v42uN.jpeg", location: "Muğla", name: "Fethiye Özyer Merkez Ofis" },
+    { url: "https://i.imgur.com/aWMg9M9.png", location: "Elazığ", name: "Elazığ Entegre Sağlık Kampüsü" },
+    { url: "https://i.imgur.com/rQ33nBK.jpeg", location: "Ankara", name: "Türkiye Barolar Birliği Hizmet Binası ve Sosyal Tesisleri" },
+    { url: "https://i.imgur.com/vVR3b6D.png", location: "Ankara", name: "T.B.M.M. Alüminyum Doğrama ve Yenileme" },
+    { url: "https://i.imgur.com/fPIm7Tr.png", location: "Ankara", name: "Elvankent Gimsa"},
+    { url: "https://i.imgur.com/j5hsXbp.jpeg", location: "Ankara", name: "Devlet Mahallesi Gimsa"},
+    { url: "https://i.imgur.com/KgLSiO1.png", location: "Ankara", name: "Atayıldız Plaza 2"},
+    { url: "https://i.imgur.com/nOvLfBa.png", location: "Kayseri", name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu"},
+    // ... Diğer girdiler
+  ], []);
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateImage, setAnimateImage] = useState(true); // Animasyon durumu
+  const [swipeDirection, setSwipeDirection] = useState(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % photoDataArray.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []); // Dependency array simplified to run once
+  const handlePrevious = () => {
+    if (currentIndex === 0) return;
+    setSwipeDirection("left");
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? photoDataArray.length - 1 : prevIndex - 1));
+  };
 
-  useEffect(() => {
-    // Sayfa açıldıktan 0.5 saniye sonra küçülme animasyonu başlar
-    const timer = setTimeout(() => {
-      setAnimateImage(false);
-    }, 500);
-    return () => clearTimeout(timer); // Temizlik işlemi
-  }, []);
+  const handleNext = () => {
+    if (currentIndex === photoDataArray.length - 1) return;
+    setSwipeDirection("right");
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % photoDataArray.length);
+  };
 
-  const currentPhotoData = photoDataArray[currentIndex];
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      setSwipeDirection("right");
+      handleNext();
+    },
+    onSwipedRight: () => {
+      setSwipeDirection("left");
+      handlePrevious();
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
+  const isAtStart = currentIndex === 0;
+  const isAtEnd = currentIndex === photoDataArray.length - 1;
 
   return (
-    <div className="flex flex-col relative h-screen bg-gray-900">
-      <HomeHeader />
-
-      {/* Başlangıçta tüm sayfayı kaplayan ve küçülen görsel, sadece masaüstü cihazlarda görünür */}
-      <img
-        src={require(`../assets/${currentPhotoData.city}.png`)}
-        className={`bg-center transition-all duration-[2000ms] ease-out hidden md:block ${animateImage
-          ? 'absolute inset-0 w-full h-[60%] sm:h-[70%] md:h-[80%] lg:h-[90%] mt-11' // Mobilde gizlenir, ekran büyüdükçe büyür
-          : 'absolute w-[80%] sm:w-[60%] md:w-[20%] lg:w-[30%] xl:w-[15%] shadow-2xl rounded-lg h-[20%] right-2 mt-32' // Küçülmüş ve Sabit Çerçeve içinde (Responsive)
-          } z-10`}
-      />
-
-      <main className="flex-1 flex items-center justify-center">
-        {/* Sabit Çerçeve */}
-        <div className="overflow-hidden w-full h-full border-4 border-gray-700 relative">
+    <div className="flex flex-col h-screen bg-gray-900 text-white">
+      <main className="flex-1 flex items-center justify-center overflow-hidden relative" {...handlers}>
+        <div key={currentIndex} className="relative w-full h-full ">
+          {/* Slideshow Image */}
           <div
-            className="absolute inset-0 bg-cover bg-center animate-vertical-pan"
-            style={{
-              backgroundImage: `url('${currentPhotoData.url}')`,
-              transformOrigin: "center",
-            }}
+            className="w-full h-full bg-cover bg-no-repeat bg-center"
+            style={{ backgroundImage: `url('${photoDataArray[currentIndex].url}')` }}
           ></div>
 
-          {/* Bilgi Kutusu */}
-          {!animateImage && (
-            <div className="absolute top-2 right-1 bg-gray-800 p-2 md:p-3 shadow-lg rounded-lg border border-gray-700 flex flex-col items-center justify-center">
-              <h2 className="text-blue-400 font-semibold text-sm md:text-md">{currentPhotoData.name}</h2>
-            </div>
-          )}
+          {/* Info Box */}
+          <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-black bg-opacity-70 p-4 rounded-md shadow-md z-10 max-w-xs md:max-w-md">
+            <h2 className="text-lg md:text-xl font-bold text-white text-opacity-90">{photoDataArray[currentIndex].name}</h2>
+            <p className="text-sm md:text-base text-white text-opacity-70">{photoDataArray[currentIndex].location}</p>
+          </div>
+
+          {/* Controls ve Fotoğraf Sayısı */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
+            <button
+              onClick={handlePrevious}
+              className={`p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300 ${isAtStart ? "opacity-50 cursor-not-allowed" : ""}`}
+              disabled={isAtStart}
+              aria-label="Previous Image"
+            >
+              <FaChevronLeft size={30} className="text-white" />
+            </button>
+            <p className="text-sm md:text-base bg-black bg-opacity-70 px-4 py-1 rounded-md">
+              {` ${currentIndex + 1} / ${photoDataArray.length}`}
+            </p>
+            <button
+              onClick={handleNext}
+              className={`p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300 ${isAtEnd ? "opacity-50 cursor-not-allowed" : ""}`}
+              disabled={isAtEnd}
+              aria-label="Next Image"
+            >
+              <FaChevronRight size={30} className="text-white" />
+            </button>
+          </div>
         </div>
       </main>
-
-      <HomeFooter />
     </div>
   );
 }

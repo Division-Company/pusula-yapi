@@ -3,10 +3,10 @@ import CheckBox from '../CheckBox';
 
 export default function Careers() {
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen p-8 flex flex-col items-center">
+    <div className="bg-slate-500 text-gray-300 min-h-screen p-8 flex flex-col items-center">
       <h2 className="text-4xl text-orange-400 font-bold mb-8">Kariyer Fırsatları</h2>
 
-      <section className="w-full max-w-8xl bg-gray-800 p-6 rounded-lg shadow-lg mb-12">
+      <section className="w-full max-w-8xl bg-slate-700 p-6 rounded-lg shadow-lg mb-12">
         <h3 className="text-2xl text-orange-300 font-semibold mb-4">KVKK Aydınlatma Metni</h3>
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
           <p>İşbu KVKK 10. maddesine uygun şekilde düzenlenmiş Aydınlatma Metni’nde, Pusula Alüminyum Pusula Alüminyum Metal Yapı Sistemleri Sanayi Ticaret Limited Şirketi (“İŞVEREN”) tarafından, iş başvurusu, CV gönderilmesi, mülakat ve benzeri aşamalarında başvuru sahibi tarafından verilecek kişisel ve özel nitelikli kişisel verilerinizin işlenmesi ve veri sahibinin haklarına ilişkin esaslar aşağıda belirtilmiştir.</p><br />

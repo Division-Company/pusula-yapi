@@ -80,7 +80,7 @@ export default function OngoingProjects() {
 
   ];
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-8">
+    <div className="bg-slate-500 text-white min-h-screen p-8">
       <h1 className="text-4xl font-bold mb-6 border-b border-gray-700 pb-2">Devam Eden Projeler</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((item) => (
@@ -91,7 +91,7 @@ export default function OngoingProjects() {
                 state: { item },
               })
             }
-            className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            className="group relative bg-slate-600 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
           >
             <img
               src={item.img}

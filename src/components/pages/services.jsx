@@ -31,7 +31,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen p-8 flex flex-col items-center">
+    <div className="bg-slate-500 text-gray-300 min-h-screen p-8 flex flex-col items-center">
       <h2 className="text-4xl text-orange-400 font-bold mb-12 animate-fadeIn">Faaliyet Alanlarımız</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {services.map((service, index) => (

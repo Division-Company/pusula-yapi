@@ -3,21 +3,21 @@ import logo from '../assets/logo.png';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-500 p-4">
       {/* Logo */}
       <div className="mb-8">
         <img src={logo} alt="Logo" className="w-[300px] sm:w-[400px] md:w-[500px] h-auto" /> {/* Logonun responsive genişliği */}
       </div>
 
       {/* İçerik ve Harita Bölümü */}
-      <div className="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12 p-4 sm:p-8 bg-white shadow-lg rounded-lg max-w-4xl w-full">
+      <div className="border-slate-700 border-2 shadow-2xl flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12 p-4 sm:p-8 bg-slate-500 text-white rounded-lg max-w-4xl w-full">
         
         {/* İletişim Bilgileri */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">İletişim Bilgileri</h2>
-          <p className="text-gray-600 mb-4 text-sm sm:text-base">Bize aşağıdaki iletişim bilgilerinden ulaşabilirsiniz.</p>
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">İletişim Bilgileri</h2>
+          <p className="mb-4 text-sm sm:text-base">Bize aşağıdaki iletişim bilgilerinden ulaşabilirsiniz.</p>
           
-          <div className="text-gray-700 space-y-2 text-sm sm:text-base">
+          <div className="space-y-2 text-sm sm:text-base">
             <div className="flex items-center">
               <span className="text-blue-500 mr-2">📞</span>
               <a href="tel:+903123944321" className="hover:underline hover:text-orange-400 cursor-pointer transition-colors">+90 (312) 394 43 21</a>
