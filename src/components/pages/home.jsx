@@ -4,6 +4,7 @@ import { useSwipeable } from "react-swipeable";
 
 export default function Home() {
   const photoDataArray = useMemo(() => [
+    { url: "https://i.imgur.com/iln8oeM.png", location: "Ankara", name: "Atayıldız Plaza 1"},
     { url: "https://i.imgur.com/2nL9lwD.png", year: 2020, location: "Ankara", name: "Ankara Etlik Entegre Sağlık Kampüsü" },
     { url: "https://i.imgur.com/U0v42uN.jpeg", location: "Muğla", name: "Fethiye Özyer Merkez Ofis" },
     { url: "https://i.imgur.com/aWMg9M9.png", location: "Elazığ", name: "Elazığ Entegre Sağlık Kampüsü" },
@@ -11,7 +12,6 @@ export default function Home() {
     { url: "https://i.imgur.com/vVR3b6D.png", location: "Ankara", name: "T.B.M.M. Alüminyum Doğrama ve Yenileme" },
     { url: "https://i.imgur.com/fPIm7Tr.png", location: "Ankara", name: "Elvankent Gimsa"},
     { url: "https://i.imgur.com/j5hsXbp.jpeg", location: "Ankara", name: "Devlet Mahallesi Gimsa"},
-    { url: "https://i.imgur.com/iln8oeM.png", location: "Ankara", name: "Atayıldız Plaza 1"},
     { url: "https://i.imgur.com/KgLSiO1.png", location: "Ankara", name: "Atayıldız Plaza 2"},
     { url: "https://i.imgur.com/nOvLfBa.png", location: "Kayseri", name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu"},
     // ... Diğer girdiler
