@@ -7,14 +7,14 @@ export default function OngoingProjects() {
   const projects = [
     {
       id: 1,
-      name: 'Bodrum Güllük',
+      name: 'Fethiye Güllük',
       img: 'https://i.imgur.com/xeWecIe.jpeg',
       images: [
         'https://i.imgur.com/b8N1EHo.jpeg',
         'https://i.imgur.com/ActXZVG.jpeg',
         'https://i.imgur.com/HDujsxl.jpeg',
       ],
-      title: 'Bodrum Projesi',
+      title: 'Fethiye Projesi',
       subTitle: 'Ege Bölgesi İnşaatı',
     },
     {
