@@ -13,7 +13,9 @@ export default function Home() {
     { url: "https://i.imgur.com/fPIm7Tr.png", location: "Ankara", name: "Elvankent Gimsa"},
     { url: "https://i.imgur.com/j5hsXbp.jpeg", location: "Ankara", name: "Devlet Mahallesi Gimsa"},
     { url: "https://i.imgur.com/KgLSiO1.png", location: "Ankara", name: "Atayıldız Plaza 2"},
-    { url: "https://i.imgur.com/nOvLfBa.png", location: "Kayseri", name: "Kayseri Büyükşehir Belediyesi Kadir Has Şehir Stadyumu"},
+    { url: "https://i.imgur.com/ITUX6sL.jpeg", location: "Ankara", name: "Ankara Batı Koleji"},
+    { url: "https://i.imgur.com/15CT6Hw.jpeg", location: "Ankara", name: "Ankara Şara Grup"},
+    { url: "https://i.imgur.com/WK1jgOi.png", location: "Muğla", name: "Fethiye Özyer Merkez Ofis"},
     // ... Diğer girdiler
   ], []);
 
